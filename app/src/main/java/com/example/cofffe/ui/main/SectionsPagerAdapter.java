@@ -1,6 +1,7 @@
 package com.example.cofffe.ui.main;
 
 import android.content.Context;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -9,6 +10,7 @@ import android.text.style.ImageSpan;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -19,6 +21,8 @@ import com.example.cofffe.R;
 import com.example.cofffe.SecondActivity;
 import com.example.cofffe.ThirdActivity;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
@@ -28,12 +32,19 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3, R.string.tab_text_4};
     private static final int[] TAB_ICONS = new int[]{
-            R.drawable.img_10,
+            R.drawable.img_6,
             R.drawable.img_11,
             R.drawable.img_12,
             R.drawable.img_13
     };
     private final Context mContext;
+
+    public static Drawable tintIcon(Context context, @NotNull Drawable icon, int color) {
+        icon = DrawableCompat.wrap(icon).mutate();
+        DrawableCompat.setTintList(icon, ContextCompat.getColorStateList(context, color));
+        DrawableCompat.setTintMode(icon, PorterDuff.Mode.SRC_IN);
+        return icon;
+    }
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
@@ -52,6 +63,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         return spannableString;
     }
+
+
 
 
     @Override
@@ -73,6 +86,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         }
         return null;
     }
+
+
 
 
 
