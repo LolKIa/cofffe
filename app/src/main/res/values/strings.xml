@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">cofffe</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
-    <string name="tab_text_4">Tab 4</string>
+    <string name="tab_text_1"></string>
+    <string name="tab_text_2"></string>
+    <string name="tab_text_3"></string>
+    <string name="tab_text_4"></string>
     <string name="btn">Get Started</string>
     <string name="main">Coffee so good,\nyour taste buds\nwill love it.</string>
     <string name="hint">The best grain, the finest roast, the\npowerful flavor.</string>

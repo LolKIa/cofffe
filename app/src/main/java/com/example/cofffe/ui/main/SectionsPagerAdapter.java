@@ -29,9 +29,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3, R.string.tab_text_4};
     private static final int[] TAB_ICONS = new int[]{
             R.drawable.img_10,
-            R.drawable.img_7,
-            R.drawable.img_8,
-            R.drawable.img_9
+            R.drawable.img_11,
+            R.drawable.img_12,
+            R.drawable.img_13
     };
     private final Context mContext;
 
@@ -79,7 +79,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
         return 4;
     }
 }
