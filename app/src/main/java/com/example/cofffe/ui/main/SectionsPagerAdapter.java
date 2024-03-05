@@ -37,14 +37,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             R.drawable.img_12,
             R.drawable.img_13
     };
-    private final Context mContext;
 
-    public static Drawable tintIcon(Context context, @NotNull Drawable icon, int color) {
-        icon = DrawableCompat.wrap(icon).mutate();
-        DrawableCompat.setTintList(icon, ContextCompat.getColorStateList(context, color));
-        DrawableCompat.setTintMode(icon, PorterDuff.Mode.SRC_IN);
-        return icon;
-    }
+    private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);

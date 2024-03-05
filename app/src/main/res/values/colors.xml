@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#818181</color>
     <color name="btn">#EA8537</color>
+    <color name="icon">#EA8537</color>
 </resources>
