@@ -18,4 +18,6 @@ public class ThirdActivity extends Fragment {
     {
         return inflater.inflate(R.layout.third_tab, container, false);
     }
+
+
 }

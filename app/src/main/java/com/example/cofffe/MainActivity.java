@@ -23,15 +23,69 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_main);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        //ViewPager viewPager = findViewById(R.id.viewPager);
+        //TabLayout tabs = findViewById(R.id.tabs);
         ViewPager viewPager = binding.viewPager;
-        viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
+
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        viewPager.setAdapter(sectionsPagerAdapter);
         tabs.setupWithViewPager(viewPager);
+
+        tabs.getSelectedTabPosition();
+        tabs.getTabAt(0).setIcon(R.drawable.img_10);
+        tabs.getTabAt(1).setIcon(R.drawable.img_11);
+        tabs.getTabAt(2).setIcon(R.drawable.img_12);
+        tabs.getTabAt(3).setIcon(R.drawable.img_13);
+
+        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab.getPosition()==0){
+                    tab.setIcon(R.drawable.img_10);
+                }else if (tab.getPosition()==1){
+                    tab.setIcon(R.drawable.img_11);
+                }else if (tab.getPosition()==2){
+                    tab.setIcon(R.drawable.img_12);
+                }else if (tab.getPosition()==3){
+                    tab.setIcon(R.drawable.img_13);
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                if (tab.getPosition()==0){
+                    tab.setIcon(R.drawable.img_10);
+                }else if (tab.getPosition()==1){
+                    tab.setIcon(R.drawable.img_11);
+                }else if (tab.getPosition()==1){
+                    tab.setIcon(R.drawable.img_12);
+                }else if (tab.getPosition()==1){
+                    tab.setIcon(R.drawable.img_13);
+                }
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                if (tab.getPosition()==0){
+                    tab.setIcon(R.drawable.img_13);
+                }else if (tab.getPosition()==1){
+                    tab.setIcon(R.drawable.img_12);
+                }else if (tab.getPosition()==2){
+                    tab.setIcon(R.drawable.img_11);
+                }else if (tab.getPosition()==3){
+                    tab.setIcon(R.drawable.img_10);
+                }
+            }
+        });
 
     }
 }
+
+
+

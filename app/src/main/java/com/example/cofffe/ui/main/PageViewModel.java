@@ -19,4 +19,7 @@ public class PageViewModel extends ViewModel {
     public LiveData<String> getText() {
         return mText;
     }
+
+
 }
+

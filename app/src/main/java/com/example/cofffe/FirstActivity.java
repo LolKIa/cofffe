@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class FirstActivity extends Fragment {
 
     @Nullable
@@ -18,4 +20,5 @@ public class FirstActivity extends Fragment {
     {
         return inflater.inflate(R.layout.first_tab, container, false);
     }
+
 }
