@@ -73,13 +73,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 if (tab.getPosition()==0){
-                    tab.setIcon(R.drawable.img_13);
-                }else if (tab.getPosition()==1){
-                    tab.setIcon(R.drawable.img_12);
-                }else if (tab.getPosition()==2){
-                    tab.setIcon(R.drawable.img_11);
-                }else if (tab.getPosition()==3){
                     tab.setIcon(R.drawable.img_10);
+                }else if (tab.getPosition()==1){
+                    tab.setIcon(R.drawable.img_11);
+                }else if (tab.getPosition()==2){
+                    tab.setIcon(R.drawable.img_12);
+                }else if (tab.getPosition()==3){
+                    tab.setIcon(R.drawable.img_13);
                 }
             }
         });
